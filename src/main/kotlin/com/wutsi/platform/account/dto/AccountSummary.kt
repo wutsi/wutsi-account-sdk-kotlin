@@ -9,6 +9,7 @@ public data class AccountSummary(
   public val pictureUrl: String? = null,
   public val status: String = "",
   public val displayName: String? = null,
+  public val language: String = "",
   public val created: OffsetDateTime = OffsetDateTime.now(),
   public val updated: OffsetDateTime = OffsetDateTime.now()
 )
