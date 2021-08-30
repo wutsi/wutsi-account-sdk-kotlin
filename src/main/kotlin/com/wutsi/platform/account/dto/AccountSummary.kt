@@ -1,6 +1,7 @@
 package com.wutsi.platform.account.dto
 
 import java.time.OffsetDateTime
+import kotlin.Boolean
 import kotlin.Long
 import kotlin.String
 
@@ -11,5 +12,6 @@ public data class AccountSummary(
   public val displayName: String? = null,
   public val language: String = "",
   public val created: OffsetDateTime = OffsetDateTime.now(),
-  public val updated: OffsetDateTime = OffsetDateTime.now()
+  public val updated: OffsetDateTime = OffsetDateTime.now(),
+  public val superUser: Boolean = false
 )
