@@ -7,5 +7,6 @@ public data class CreateAccountRequest(
   public val language: String = "en",
   public val country: String = "US",
   public val displayName: String? = null,
-  public val pictureUrl: String? = null
+  public val pictureUrl: String? = null,
+  public val password: String? = null
 )
