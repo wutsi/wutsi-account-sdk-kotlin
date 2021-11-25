@@ -8,29 +8,25 @@ import com.wutsi.platform.account.dto.GetAccountResponse
 import com.wutsi.platform.account.dto.GetPaymentMethodResponse
 import com.wutsi.platform.account.dto.ListPaymentMethodResponse
 import com.wutsi.platform.account.dto.SavePasswordRequest
+import com.wutsi.platform.account.dto.SearchAccountRequest
 import com.wutsi.platform.account.dto.SearchAccountResponse
 import com.wutsi.platform.account.dto.UpdateAccountAttributeRequest
 import com.wutsi.platform.account.dto.UpdatePaymentMethodRequest
 import feign.Headers
 import feign.Param
 import feign.RequestLine
-import kotlin.Int
 import kotlin.Long
 import kotlin.String
 import kotlin.Unit
 
 public interface WutsiAccountApi {
-  @RequestLine("GET /v1/accounts?phone-number={phone-number}&limit={limit}&offset={offset}")
-  @Headers(value=["Content-Type: application/json"])
-  public fun searchAccount(
-    @Param("phone-number") phoneNumber: String,
-    @Param("limit") limit: Int = 20,
-    @Param("offset") offset: Int = 0
-  ): SearchAccountResponse
-
   @RequestLine("POST /v1/accounts")
   @Headers(value=["Content-Type: application/json"])
   public fun createAccount(request: CreateAccountRequest): CreateAccountResponse
+
+  @RequestLine("POST /v1/accounts/search")
+  @Headers(value=["Content-Type: application/json"])
+  public fun searchAccount(request: SearchAccountRequest): SearchAccountResponse
 
   @RequestLine("GET /v1/accounts/{id}")
   @Headers(value=["Content-Type: application/json"])
