@@ -11,6 +11,8 @@ import com.wutsi.platform.account.dto.SavePasswordRequest
 import com.wutsi.platform.account.dto.SearchAccountRequest
 import com.wutsi.platform.account.dto.SearchAccountResponse
 import com.wutsi.platform.account.dto.UpdateAccountAttributeRequest
+import com.wutsi.platform.account.dto.UpdateAccountRequest
+import com.wutsi.platform.account.dto.UpdateAccountResponse
 import com.wutsi.platform.account.dto.UpdatePaymentMethodRequest
 import feign.Headers
 import feign.Param
@@ -31,6 +33,11 @@ public interface WutsiAccountApi {
   @RequestLine("GET /v1/accounts/{id}")
   @Headers(value=["Content-Type: application/json"])
   public fun getAccount(@Param("id") id: Long): GetAccountResponse
+
+  @RequestLine("POST /v1/accounts/{id}")
+  @Headers(value=["Content-Type: application/json"])
+  public fun updateAccount(@Param("id") id: Long, request: UpdateAccountRequest):
+      UpdateAccountResponse
 
   @RequestLine("DELETE /v1/accounts/{id}")
   @Headers(value=["Content-Type: application/json"])
