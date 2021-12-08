@@ -15,5 +15,6 @@ public data class Account(
   public val country: String = "",
   public val created: OffsetDateTime = OffsetDateTime.now(),
   public val updated: OffsetDateTime = OffsetDateTime.now(),
-  public val superUser: Boolean = false
+  public val superUser: Boolean = false,
+  public val transferSecured: Boolean = true
 )
