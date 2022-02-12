@@ -6,7 +6,7 @@
 
   <artifactId>wutsi-account-sdk-kotlin</artifactId>
   <groupId>com.wutsi.platform.account</groupId>
-  <version>1.0.35-SNAPSHOT</version>
+  <version>1.0.36-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>wutsi-account-sdk-kotlin</name>
