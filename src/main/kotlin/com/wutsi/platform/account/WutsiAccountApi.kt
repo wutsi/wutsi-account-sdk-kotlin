@@ -5,6 +5,7 @@ import com.wutsi.platform.account.dto.AddPaymentMethodResponse
 import com.wutsi.platform.account.dto.CreateAccountRequest
 import com.wutsi.platform.account.dto.CreateAccountResponse
 import com.wutsi.platform.account.dto.GetAccountResponse
+import com.wutsi.platform.account.dto.GetCategoryResponse
 import com.wutsi.platform.account.dto.GetPaymentMethodResponse
 import com.wutsi.platform.account.dto.ListBusinessHourResponse
 import com.wutsi.platform.account.dto.ListCategoryResponse
@@ -73,6 +74,10 @@ public interface WutsiAccountApi {
   @RequestLine("GET /v1/categories")
   @Headers(value=["Content-Type: application/json"])
   public fun listCategories(): ListCategoryResponse
+
+  @RequestLine("GET /v1/categories/{id}")
+  @Headers(value=["Content-Type: application/json"])
+  public fun getCategory(@Param("id") id: Long): GetCategoryResponse
 
   @RequestLine("GET /v1/accounts/{id}/payment-methods")
   @Headers(value=["Content-Type: application/json"])
