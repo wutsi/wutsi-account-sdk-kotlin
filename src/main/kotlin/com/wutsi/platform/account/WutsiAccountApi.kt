@@ -7,6 +7,7 @@ import com.wutsi.platform.account.dto.CreateAccountResponse
 import com.wutsi.platform.account.dto.GetAccountResponse
 import com.wutsi.platform.account.dto.GetPaymentMethodResponse
 import com.wutsi.platform.account.dto.ListBusinessHourResponse
+import com.wutsi.platform.account.dto.ListCategoryResponse
 import com.wutsi.platform.account.dto.ListPaymentMethodResponse
 import com.wutsi.platform.account.dto.SaveBusinessHourRequest
 import com.wutsi.platform.account.dto.SavePasswordRequest
@@ -68,6 +69,10 @@ public interface WutsiAccountApi {
   @RequestLine("POST /v1/accounts/{id}/business-hours")
   @Headers(value=["Content-Type: application/json"])
   public fun saveBusinessHour(@Param("id") id: Long, request: SaveBusinessHourRequest): Unit
+
+  @RequestLine("GET /v1/categories")
+  @Headers(value=["Content-Type: application/json"])
+  public fun listCategories(): ListCategoryResponse
 
   @RequestLine("GET /v1/accounts/{id}/payment-methods")
   @Headers(value=["Content-Type: application/json"])
