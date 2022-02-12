@@ -6,7 +6,7 @@
 
   <artifactId>wutsi-account-sdk-kotlin</artifactId>
   <groupId>com.wutsi.platform.account</groupId>
-  <version>1.0.37-SNAPSHOT</version>
+  <version>1.0.37</version>
   <packaging>jar</packaging>
 
   <name>wutsi-account-sdk-kotlin</name>
@@ -54,7 +54,7 @@
 
   <scm>
     <developerConnection>scm:git:https://github.com/wutsi/wutsi-account-sdk-kotlin.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>wutsi-account-sdk-kotlin-1.0.37</tag>
   </scm>
   <distributionManagement>
     <repository>
