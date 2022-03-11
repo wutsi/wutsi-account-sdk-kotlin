@@ -25,5 +25,6 @@ public data class Account(
   public val street: String? = null,
   public val cityId: Long? = null,
   public val timezoneId: String? = null,
-  public val category: Category? = null
+  public val category: Category? = null,
+  public val hasStore: Boolean = false
 )
