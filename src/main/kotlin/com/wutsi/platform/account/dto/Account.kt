@@ -30,5 +30,6 @@ public data class Account(
   public val hasStore: Boolean = false,
   public val facebookId: String? = null,
   public val instagramId: String? = null,
-  public val twitterId: String? = null
+  public val twitterId: String? = null,
+  public val overallMetrics: Metrics = Metrics()
 )
