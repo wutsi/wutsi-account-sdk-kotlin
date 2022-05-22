@@ -1,6 +1,7 @@
 package com.wutsi.platform.account.dto
 
 import kotlin.Boolean
+import kotlin.Long
 import kotlin.String
 
 public data class CreateAccountRequest(
@@ -11,5 +12,6 @@ public data class CreateAccountRequest(
   public val pictureUrl: String? = null,
   public val password: String? = null,
   public val addPaymentMethod: Boolean = false,
-  public val business: Boolean = false
+  public val business: Boolean = false,
+  public val cityId: Long? = null
 )
