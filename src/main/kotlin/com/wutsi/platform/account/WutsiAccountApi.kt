@@ -4,6 +4,7 @@ import com.wutsi.platform.account.dto.AddPaymentMethodRequest
 import com.wutsi.platform.account.dto.AddPaymentMethodResponse
 import com.wutsi.platform.account.dto.CreateAccountRequest
 import com.wutsi.platform.account.dto.CreateAccountResponse
+import com.wutsi.platform.account.dto.EnableBusinessRequest
 import com.wutsi.platform.account.dto.GetAccountResponse
 import com.wutsi.platform.account.dto.GetCategoryResponse
 import com.wutsi.platform.account.dto.GetPaymentMethodResponse
@@ -62,6 +63,14 @@ public interface WutsiAccountApi {
   @RequestLine("POST /v1/accounts/{id}/password")
   @Headers(value=["Content-Type: application/json"])
   public fun savePassword(@Param("id") id: Long, request: SavePasswordRequest): Unit
+
+  @RequestLine("POST /v1/accounts/{id}/business")
+  @Headers(value=["Content-Type: application/json"])
+  public fun enableBusiness(@Param("id") id: Long, request: EnableBusinessRequest): Unit
+
+  @RequestLine("DELETE /v1/accounts/{id}/business")
+  @Headers(value=["Content-Type: application/json"])
+  public fun disableBusiness(@Param("id") id: Long): Unit
 
   @RequestLine("GET /v1/accounts/{id}/business-hours")
   @Headers(value=["Content-Type: application/json"])
